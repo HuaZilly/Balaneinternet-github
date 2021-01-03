@@ -1,0 +1,402 @@
+//Variable
+
+$c-black: black    
+$c-red: red
+$c-white: white
+$c-bg-button: #d62a5d
+
+$bg-business-b2c: url(https://www.balanceinternet.com.au/wp-content/uploads/B2B_Image2@2x.jpg)
+$bg-online-retail: url(https://www.balanceinternet.com.au/wp-content/uploads/b2c-hover-1.png)
+$bg-brand-direct: url(https://www.balanceinternet.com.au/wp-content/uploads/d2c-hover.png)
+$bg-government: url(https://www.balanceinternet.com.au/wp-content/uploads/government-hover.png)
+$bg-corporate: url(https://www.balanceinternet.com.au/wp-content/uploads/corporate-hover.png)
+$bg-education: url(https://www.balanceinternet.com.au/wp-content/uploads/education-hover.png)
+$site-call: url('https://www.balanceinternet.com.au/wp-content/themes/Balance%20Internet%202018%20-%20SASS/img/b2b/landing-mask5.svg') 
+
+$md: 768px
+$l: 1024px
+
+
+body
+    margin: 0 auto
+    font-family: 'Asap', sans-serif
+    overflow-x: hidden
+ul,ol,li
+    padding: 0
+    list-style: none
+img
+    display: block    
+a
+    text-decoration: none   
+h3
+    font-size: 24px    
+.text-black
+    color: $c-black
+    font-size: 18px
+.text-white
+    color: $c-white   
+.text-red
+    color: $c-red    
+.font-weight700
+    font-weight: 700
+.link-top
+    padding: 20px 0    
+.link-bottom
+    padding: 0px 0  20px    
+    border-radius: 0 0 10px 10px 
+.business-b2c
+    background-image: $bg-business-b2c
+.online-retail
+    background-image: $bg-online-retail
+.brand-direct
+    background-image: $bg-brand-direct
+.government
+    background-image: $bg-government
+.corporate
+    background-image: $bg-corporate
+.education
+    background-image: $bg-education                        
+//Header
+//@media screen and ( min-width: $l)
+        
+.header
+    height: 88px
+    background: $c-white
+    position: fixed
+    width: 100%
+    z-index: 1000
+    .header-ctn__nav
+        justify-content: space-between
+        display: flex
+        .ctn-nav__logo
+            img
+                border-left: 5px solid red
+                width: 60%  
+                padding: 27px 15px
+        .ctn-nav__items
+            .main-menu
+                display: flex
+                margin: 0 auto
+                .menu-items
+                    .hover-red
+                        padding: 30px 20px
+                        display: block
+                        .fas.fa-angle-right
+                            display: none
+                        &:hover
+                            color: $c-red    
+                .toggle-list
+                    .sub-menu
+                        max-height: 0
+                        top:85px
+                        transition-duration: 0.5s
+                        opacity: 0
+                        visibility: hidden
+                        position: absolute
+                        padding: 0
+                        z-index: -20
+                        .back-submenu
+                            display: none
+                        a
+                            color: $c-black
+                            padding: 10px 20px
+                            // font-size: 0
+                    &:hover
+                        border-bottom: 5px solid $c-red
+                        .sub-menu
+                            max-height: 400px
+                            z-index: 1000
+                            opacity: 1
+                            visibility: visible
+                            display: block
+                            transition-duration: 0.5s
+                            border-radius: 10px
+                            li
+                                background: $c-white
+                            
+                                &:hover
+                                    color: $c-red
+        .nav-icon
+            display: none                            
+                                
+
+        .ctn-nav__call
+            span
+                display: inline-block
+                vertical-align: middle
+            .site-header
+                display: block
+                padding: 15px 10px 15px 40px
+                background-image: $site-call
+                background-repeat: no-repeat
+                .phone
+                    border-radius: 50%
+                    text-align: center
+                    width: 40px
+                    height: 40px
+                    background: $c-white
+                    i
+                        font-size: 20px
+                        padding: 10px
+                .number
+                    padding: 20px    
+.banner
+    position: relative
+    top: 88px
+    .banner-ctn
+        width: 100%
+        display: flex
+        .banner-ctn__item
+            width: 20%
+            min-height: 400px
+            .link-banner
+                display: block
+                padding: 150px 20px
+                background-size: cover
+                .overlay-hover
+                    width: 100%
+                    height: 100%
+                .slide-icon
+                    width: 110px
+                    height: 110px
+                    background: $c-white
+                    border-radius: 100%
+                    img
+                        margin: 0 auto
+                        padding: 38px
+
+                .link-banner__heading
+                    height: 40px
+                    .landing-title
+                        &::after
+                            content: ""
+                            background: red
+                            width: 60px
+                            height: 5px
+                            display: block
+                            margin-top: 20px
+                            border-radius: 10px
+                .link-banner__more
+                    display: block
+                    position: relative
+                    top: 60px    
+                    .more-button
+                        color: $c-white
+                        border-radius: 40px
+                        padding: 20px
+                        background: $c-bg-button
+@media screen and ( max-width: $md - 1 )
+    .header
+        width: 100%
+        overflow-x: hidden
+        position: fixed
+        height: 90px
+        .header-ctn__nav
+            justify-content: space-between
+            height: 80px
+            align-items: center
+            .ctn-nav__logo
+                width: 30%
+                img
+                    width: 90%
+                    padding: 40px 15px
+            .ctn-nav__items
+                position: relative
+                .main-menu
+                    width: 70%
+                    height: 100%
+                    background: $c-white
+                    opacity: 0
+                    visibility: hidden
+                    display: block
+                    transition-duration: 0.5s
+                    top: 80px
+                    left: 0
+                    position: fixed
+                    .menu-items
+                        .hover-red
+                            padding: 20px
+                            .fas.fa-angle-right
+                                display: inline
+                           
+                    &.toggle
+                        transition-duration: 0.5s
+                        opacity: 1
+                        visibility: visible
+                        top: 80px
+                        left: 0
+                        position: fixed
+                    .toggle-list
+                        .sub-menu
+                            .back-submenu
+                                display: block    
+                        &:hover
+                            border: none
+                            .sub-menu
+                                max-height: 1000px
+                                top: 0
+                                width: 100%    
+                                .link-items
+                                    padding: 20px
+                                &.return-mainmenu
+                                    max-height: 0
+                                    top:0px
+                                    transition-duration: 0.5s
+                                    opacity: 0
+                                    visibility: hidden
+                                    position: absolute
+                                    padding: 0
+                                    z-index: -20   
+                        &.new-toggle
+                            .sub-menu
+                                max-height: 1000px
+                                top: 0
+                                width: 100%              
+
+            .nav-icon
+                display: block
+                color: $c-bg-button    
+                font-size: 24px
+                left: 35px
+                position: relative
+                &:hover
+                    .main-menu
+                        opacity: 1
+                        visibility: visible
+                        transition-duration: 0.5s
+                    
+            .ctn-nav__call
+                .site-header
+                    padding: 30px
+                    .number
+                        display: none
+    .banner
+        position: relative
+        .banner-ctn
+            flex-wrap: wrap
+            .banner-ctn__item
+                width: 50%   
+                min-height: 200px
+                .link-banner
+                    padding: 100px 20px
+                    h3
+                        font-size: 16px
+                    .slide-icon
+                        display: none
+                    .link-banner__more
+                        .more-button
+                            padding: 10px
+                            font-size: 11px    
+@media screen and ( max-width: $l )
+    .header
+        width: 100%
+        overflow-x: hidden
+        position: fixed
+        height: 90px
+        .header-ctn__nav
+            justify-content: space-between
+            height: 80px
+            align-items: center
+            .ctn-nav__logo
+                width: 30%
+                img
+                    width: 90%
+                    padding: 40px 15px
+            .ctn-nav__items
+                position: relative
+                .main-menu
+                    width: 45%
+                    height: 100%
+                    background: $c-white
+                    opacity: 0
+                    visibility: hidden
+                    display: block
+                    transition-duration: 0.5s
+                    top: 80px
+                    left: 0
+                    position: fixed
+                    .menu-items
+                        .hover-red
+                            padding: 20px
+                            .fas.fa-angle-right
+                                display: inline
+                           
+                    &.toggle
+                        transition-duration: 0.5s
+                        opacity: 1
+                        visibility: visible
+                        top: 80px
+                        left: 0
+                        position: fixed
+                    .toggle-list
+                        .sub-menu
+                            .back-submenu
+                                display: block    
+                        &:hover
+                            border: none
+                            .sub-menu
+                                max-height: 1000px
+                                top: 0
+                                width: 100%    
+                                .link-items
+                                    padding: 20px
+                                &.return-mainmenu
+                                    max-height: 0
+                                    top:0px
+                                    transition-duration: 0.5s
+                                    opacity: 0
+                                    visibility: hidden
+                                    position: absolute
+                                    padding: 0
+                                    z-index: -20   
+                        &.new-toggle
+                            .sub-menu
+                                max-height: 1000px
+                                top: 0
+                                width: 100%              
+
+            .nav-icon
+                display: block
+                color: $c-bg-button    
+                font-size: 24px
+                left: 35px
+                position: relative
+                &:hover
+                    .main-menu
+                        opacity: 1
+                        visibility: visible
+                        transition-duration: 0.5s
+                    
+            .ctn-nav__call
+                .site-header
+                    padding: 30px 20px 30px 45px
+                    .number
+                        display: inline  
+    .banner
+        position: relative
+        .banner-ctn
+            flex-wrap: wrap
+            .banner-ctn__item
+                width: 33.33%
+                min-height: 200px
+                background-size: cover
+                background-repeat: no-repeat
+                .link-banner
+                    padding: 100px 20px
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    h3
+                        font-size: 18px
+                    .slide-icon
+                        display: block
+                        width: 60px
+                        height: 60px
+                        img
+                            padding: 0
+                            position: relative
+                            top: 15px
+                    .link-banner__more
+                        .more-button
+                            padding: 10px
+                            font-size: 11px    
