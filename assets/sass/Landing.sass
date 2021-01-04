@@ -12,6 +12,10 @@ $bg-government: url(https://www.balanceinternet.com.au/wp-content/uploads/govern
 $bg-corporate: url(https://www.balanceinternet.com.au/wp-content/uploads/corporate-hover.png)
 $bg-education: url(https://www.balanceinternet.com.au/wp-content/uploads/education-hover.png)
 $site-call: url('https://www.balanceinternet.com.au/wp-content/themes/Balance%20Internet%202018%20-%20SASS/img/b2b/landing-mask5.svg') 
+$bg-market: url('https://www.balanceinternet.com.au/wp-content/uploads/BG-Image.png')
+$bg-mantle: url('https://www.balanceinternet.com.au/wp-content/uploads/Background.png')
+$bg-digital: url('https://www.balanceinternet.com.au/wp-content/uploads/Left-bg.png')
+
 
 $md: 768px
 $l: 1024px
@@ -21,6 +25,7 @@ body
     margin: 0 auto
     font-family: 'Asap', sans-serif
     overflow-x: hidden
+    line-height: 30px
 ul,ol,li
     padding: 0
     list-style: none
@@ -29,12 +34,22 @@ img
 a
     text-decoration: none   
 h3
-    font-size: 24px    
+    font-size: 24px   
+.button
+    background: $c-bg-button     
+.h2
+    font-size: 36px    
+.about-img
+    img
+        margin: 0 auto
+.desc
+    padding: 10px 0        
 .text-black
     color: $c-black
     font-size: 18px
 .text-white
     color: $c-white   
+    font-size: 18px
 .text-red
     color: $c-red    
 .font-weight700
@@ -44,6 +59,10 @@ h3
 .link-bottom
     padding: 0px 0  20px    
     border-radius: 0 0 10px 10px 
+.bg-image
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center    
 .business-b2c
     background-image: $bg-business-b2c
 .online-retail
@@ -55,7 +74,13 @@ h3
 .corporate
     background-image: $bg-corporate
 .education
-    background-image: $bg-education                        
+    background-image: $bg-education          
+.market
+    background: $bg-market          
+.mantle
+    background: $bg-mantle
+.digital
+    background: $bg-digital                
 //Header
 //@media screen and ( min-width: $l)
         
@@ -126,7 +151,7 @@ h3
                 vertical-align: middle
             .site-header
                 display: block
-                padding: 15px 10px 15px 40px
+                padding: 24px 35px 24px
                 background-image: $site-call
                 background-repeat: no-repeat
                 .phone
@@ -139,9 +164,7 @@ h3
                         font-size: 20px
                         padding: 10px
                 .number
-                    padding: 20px    
 .banner
-    position: relative
     top: 88px
     .banner-ctn
         width: 100%
@@ -185,6 +208,77 @@ h3
                         border-radius: 40px
                         padding: 20px
                         background: $c-bg-button
+.landing-section
+    background-image: url(https://www.balanceinternet.com.au/wp-content/uploads/mask1.png)      
+    .landing-section__ctn
+        color: $c-white
+        display: flex
+        padding: 25px 40px    
+        justify-content: space-between
+        .landing-row
+            width: 70%        
+        .landing-right
+            width: 40%
+            .landing-button
+                width: 30%
+                display: block
+                padding: 15px 30px  
+                border-radius: 50px
+                margin: 0 auto
+                position: relative
+                top:35px       
+                text-align: center
+.landing-about
+    margin-top: 30px
+    .landing-about__ctn
+        width: 90%
+        display: flex
+        padding: 30px
+        justify-content: space-between
+        .about-ctn__left
+            width: 70%
+            .about__call
+                .site-call
+                    span
+                        display: inline
+                    .phone
+                        width: 40px
+                        height: 40px
+                        padding-right: 20px
+                        background: $c-white
+                        border-radius: 50%
+                        i
+                            font-size: 20px
+                            text-align: center
+                            border: 2px solid $c-red
+                           
+                           
+        .img-magento
+             margin-top: 40px           
+        .img-solutions
+            img
+                padding: 20px 0  
+.landing-product
+    .landing-product__ctn
+        padding: 10px   
+        display: flex
+        .product-content
+            width: 80%
+        .product
+            display: flex
+            border-radius: 20px
+            margin: 0 auto
+            width: 25%
+            padding: 40px
+            img
+                width: 100%
+        .market, .digital
+        .mantle    
+
+
+             
+
+       
 @media screen and ( max-width: $md - 1 )
     .header
         width: 100%
