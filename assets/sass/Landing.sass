@@ -15,7 +15,7 @@ $site-call: url('https://www.balanceinternet.com.au/wp-content/themes/Balance%20
 $bg-market: url('https://www.balanceinternet.com.au/wp-content/uploads/BG-Image.png')
 $bg-mantle: url('https://www.balanceinternet.com.au/wp-content/uploads/Background.png')
 $bg-digital: url('https://www.balanceinternet.com.au/wp-content/uploads/Left-bg.png')
-
+$primary-color: $c-bg-button
 
 $md: 768px
 $l: 1024px
@@ -37,8 +37,109 @@ h3
     font-size: 24px   
 .button
     background: $c-bg-button     
+.landing-button
+    width: 30%
+    display: block
+    padding: 15px 30px  
+    border-radius: 50px
+    margin: 0 auto
+    position: relative
+    top:35px       
+    text-align: center    
 .h2
     font-size: 36px    
+.sub-title
+    font-size: 18px    
+.border-10    
+    border-radius: 10px
+.pad-20
+    padding: 20px
+.pad-15
+    padding: 15px    
+.bd-landing
+    &::after
+        display: block
+        content: ""
+        width: 60px
+        height: 5px
+        margin-top: 20px
+        border-radius: 10px
+        background: $c-red
+$image-hover-wrapper-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55)
+$image-hover-wrapper-transition-delay: 0.25s
+$image-hover-wrapper-banner-width: 75%
+$image-hover-wrapper-banner-topspace: 25%
+$image-hover-wrapper-banner-bg: rgba($primary-color ,0.8)
+$image-hover-wrapper-icon-size: 24px
+
+.image-hover-wrapper 
+    width: 23%
+    margin: 0 auto
+    padding: 10px
+    position: relative
+
+    a 
+        display: inline-block
+        letter-spacing: normal
+        line-height: initial
+        margin: 0
+        padding: 0
+        position: relative
+
+        img 
+            float: left
+            overflow: hidden
+            width: 100%
+            border-radius: 10px
+        
+
+        .image-hover-wrapper-reveal 
+            background-color: rgba(0, 0, 0, 0.5)
+            color: $c-white
+            display: inline
+            height: 100%
+            margin-left: -100%
+            opacity: 0.8
+            position: absolute
+            width: 100%
+            z-index: 80
+            transition: $image-hover-wrapper-transition
+            transition-delay: $image-hover-wrapper-transition-delay
+            img
+                top: 20px
+                position: relative
+            &:hover 
+                background: rgba(214, 42, 93, 0.8)
+                opacity: 1
+                transition: $image-hover-wrapper-transition
+      
+
+
+            p 
+                bottom: 0
+                display: block
+                opacity: 0
+                position: absolute
+                text-align: center
+                width: 100%
+                transition: $image-hover-wrapper-transition
+        
+    
+  
+
+    .image-hover-wrapper-banner 
+        background-color: $image-hover-wrapper-banner-bg
+        color: $c-white
+        font-weight: 600
+        left: 0
+        padding: 0.5rem
+        position: absolute
+        top: $image-hover-wrapper-banner-topspace
+        width: $image-hover-wrapper-banner-width
+        z-index: 10
+  
+
+
 .about-img
     img
         margin: 0 auto
@@ -194,9 +295,6 @@ h3
                         &::after
                             content: ""
                             background: red
-                            width: 60px
-                            height: 5px
-                            display: block
                             margin-top: 20px
                             border-radius: 10px
                 .link-banner__more
@@ -219,15 +317,7 @@ h3
             width: 70%        
         .landing-right
             width: 40%
-            .landing-button
-                width: 30%
-                display: block
-                padding: 15px 30px  
-                border-radius: 50px
-                margin: 0 auto
-                position: relative
-                top:35px       
-                text-align: center
+           
 .landing-about
     margin-top: 30px
     .landing-about__ctn
@@ -265,21 +355,59 @@ h3
         .product-content
             width: 80%
         .product
+            align-items: center
             display: flex
-            border-radius: 20px
+            border-radius: 15px
             margin: 0 auto
             width: 25%
-            padding: 40px
+            padding: 20px 40px
             img
                 width: 100%
         .market, .digital
         .mantle    
+.client-case
+    p
+        width: 80%    
+    .client-case__ctn
+        display: flex
+        flex-wrap: wrap        
+.section-ourpartner
+    .our-partner__ctn
+        display: flex       
+        .section-ctn
+            flex-basis: 33.33%
+            padding-left: 0
+        img
+            max-width: 100%
+            max-height: 100px
+        a
+            width: 40%
+            margin-left: 0
+            background: $c-white
+            color: $c-bg-button
+            border: 1px solid $c-bg-button
+            transition-duration: 0.5s   
+            &:hover
+                background: $c-bg-button
+                color: $c-white
+                transition-duration: 0.5s    
+.section-leadership
+    .leadership-case__ctn
+        display: flex
+        .image-hover-wrapper-reveal
+            opacity: 0                
 
 
              
-
-       
+@media screen and ( min-width: $md - 1 )
+    .max-4line 
+        height: 90px
+        overflow: hidden
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 3
 @media screen and ( max-width: $md - 1 )
+    
     .header
         width: 100%
         overflow-x: hidden
