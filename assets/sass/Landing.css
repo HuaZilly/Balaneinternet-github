@@ -1,0 +1,807 @@
+body {
+  margin: 0 auto;
+  font-family: "Asap", sans-serif;
+  overflow-x: hidden;
+  line-height: 30px;
+}
+
+ul, ol, li {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.button {
+  background: #d62a5d;
+}
+
+.landing-button {
+  min-width: 100px;
+  display: inline;
+  padding: 15px 30px;
+  border-radius: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: 35px;
+  text-align: center;
+}
+
+.input-text {
+  padding: 14px 0 14px 20px;
+  border: none;
+  font-size: 18px;
+  outline: none;
+}
+
+.button-more {
+  background: white;
+  color: #d62a5d;
+  border: 1px solid #d62a5d;
+  transition-duration: 0.5s;
+}
+
+.button-more:hover {
+  background: #d62a5d;
+  color: white;
+  border: 1px solid #d62a5d;
+  transition-duration: 0.5s;
+}
+
+.h2 {
+  font-size: 36px;
+}
+
+.color-gray {
+  color: gray;
+  font-size: 18px;
+}
+
+.sub-title {
+  font-size: 18px;
+}
+
+.border-10 {
+  border-radius: 10px;
+}
+
+.pad-20 {
+  padding: 20px;
+}
+
+.pad-15 {
+  padding: 15px;
+}
+
+.bd-landing::after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 5px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: red;
+}
+
+.image-hover-wrapper {
+  width: 23%;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+.image-hover-wrapper a {
+  display: inline-block;
+  letter-spacing: normal;
+  line-height: initial;
+  margin: 0;
+  position: relative;
+}
+.image-hover-wrapper a img {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
+}
+.image-hover-wrapper a .image-hover-wrapper-reveal {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: inline;
+  height: 100%;
+  margin-left: -100%;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  z-index: 80;
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-delay: 0.25s;
+}
+.image-hover-wrapper a .image-hover-wrapper-reveal img {
+  top: 20px;
+  position: relative;
+}
+.image-hover-wrapper a .image-hover-wrapper-reveal:hover {
+  background: rgba(214, 42, 93, 0.8);
+  opacity: 1;
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.image-hover-wrapper a .image-hover-wrapper-reveal p {
+  bottom: 0;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.image-hover-wrapper .image-hover-wrapper-banner {
+  background-color: rgba(214, 42, 93, 0.8);
+  color: white;
+  font-weight: 600;
+  left: 0;
+  padding: 0.5rem;
+  position: absolute;
+  top: 25%;
+  width: 75%;
+  z-index: 10;
+}
+
+.about-img img {
+  margin: 0 auto;
+}
+
+.desc {
+  padding: 10px 0;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-white {
+  color: white;
+  font-size: 18px;
+}
+
+.text-red {
+  color: red;
+}
+
+.font-weight700 {
+  font-weight: 700;
+}
+
+.link-top {
+  padding: 20px 0;
+}
+
+.link-bottom {
+  padding: 0px 0 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.bg-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.business-b2c {
+  background-image: url(https://www.balanceinternet.com.au/wp-content/uploads/B2B_Image2@2x.jpg);
+}
+
+.online-retail {
+  background-image: url(https://www.balanceinternet.com.au/wp-content/uploads/b2c-hover-1.png);
+}
+
+.brand-direct {
+  background-image: url(https://www.balanceinternet.com.au/wp-content/uploads/d2c-hover.png);
+}
+
+.government {
+  background-image: url(https://www.balanceinternet.com.au/wp-content/uploads/government-hover.png);
+}
+
+.corporate {
+  background-image: url(https://www.balanceinternet.com.au/wp-content/uploads/corporate-hover.png);
+}
+
+.education {
+  background-image: url(https://www.balanceinternet.com.au/wp-content/uploads/education-hover.png);
+}
+
+.market {
+  background: url("https://www.balanceinternet.com.au/wp-content/uploads/BG-Image.png");
+}
+
+.mantle {
+  background: url("https://www.balanceinternet.com.au/wp-content/uploads/Background.png");
+}
+
+.digital {
+  background: url("https://www.balanceinternet.com.au/wp-content/uploads/Left-bg.png");
+}
+
+.header {
+  height: 88px;
+  background: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.header .header-ctn__nav {
+  justify-content: space-between;
+  display: flex;
+}
+.header .header-ctn__nav .ctn-nav__logo img {
+  border-left: 5px solid red;
+  width: 60%;
+  padding: 27px 15px;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu {
+  display: flex;
+  margin: 0 auto;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu .menu-items .hover-red {
+  padding: 30px 20px;
+  display: block;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu .menu-items .hover-red .fas.fa-angle-right {
+  display: none;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu .menu-items .hover-red:hover {
+  color: red;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list .sub-menu {
+  max-height: 0;
+  top: 85px;
+  transition-duration: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  padding: 0;
+  z-index: -20;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list .sub-menu .back-submenu {
+  display: none;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list .sub-menu a {
+  color: black;
+  padding: 10px 20px;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover {
+  border-bottom: 5px solid red;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover .sub-menu {
+  max-height: 400px;
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  transition-duration: 0.5s;
+  border-radius: 10px;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover .sub-menu li {
+  background: white;
+}
+.header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover .sub-menu li:hover {
+  color: red;
+}
+.header .header-ctn__nav .nav-icon {
+  display: none;
+}
+.header .header-ctn__nav .ctn-nav__call span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .header-ctn__nav .ctn-nav__call .site-header {
+  display: block;
+  padding: 24px 35px 24px;
+  background-image: url("https://www.balanceinternet.com.au/wp-content/themes/Balance%20Internet%202018%20-%20SASS/img/b2b/landing-mask5.svg");
+  background-repeat: no-repeat;
+}
+.header .header-ctn__nav .ctn-nav__call .site-header .phone {
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+}
+.header .header-ctn__nav .ctn-nav__call .site-header .phone i {
+  font-size: 20px;
+  padding: 10px;
+}
+.banner {
+  top: 88px;
+}
+.banner .banner-ctn {
+  width: 100%;
+  display: flex;
+}
+.banner .banner-ctn .banner-ctn__item {
+  width: 20%;
+  min-height: 400px;
+}
+.banner .banner-ctn .banner-ctn__item .link-banner {
+  display: block;
+  padding: 150px 20px;
+  background-size: cover;
+}
+.banner .banner-ctn .banner-ctn__item .link-banner .overlay-hover {
+  width: 100%;
+  height: 100%;
+}
+.banner .banner-ctn .banner-ctn__item .link-banner .slide-icon {
+  width: 110px;
+  height: 110px;
+  background: white;
+  border-radius: 100%;
+}
+.banner .banner-ctn .banner-ctn__item .link-banner .slide-icon img {
+  margin: 0 auto;
+  padding: 38px;
+}
+.banner .banner-ctn .banner-ctn__item .link-banner .link-banner__heading {
+  height: 40px;
+}
+.banner .banner-ctn .banner-ctn__item .link-banner .link-banner__heading .landing-title::after {
+  content: "";
+  background: red;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.banner .banner-ctn .banner-ctn__item .link-banner .link-banner__more {
+  display: block;
+  position: relative;
+  top: 60px;
+}
+.banner .banner-ctn .banner-ctn__item .link-banner .link-banner__more .more-button {
+  color: white;
+  border-radius: 40px;
+  padding: 20px;
+  background: #d62a5d;
+}
+
+.landing-section {
+  background-image: url(https://www.balanceinternet.com.au/wp-content/uploads/mask1.png);
+}
+.landing-section .landing-section__ctn {
+  color: white;
+  display: flex;
+  padding: 25px 40px;
+  justify-content: space-between;
+}
+.landing-section .landing-section__ctn .landing-row {
+  width: 70%;
+}
+.landing-section .landing-section__ctn .landing-right {
+  width: 40%;
+}
+
+.landing-about {
+  margin-top: 30px;
+}
+.landing-about .landing-about__ctn {
+  width: 90%;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+}
+.landing-about .landing-about__ctn .about-ctn__left {
+  width: 70%;
+}
+.landing-about .landing-about__ctn .about-ctn__left .about__call .site-call span {
+  display: inline;
+}
+.landing-about .landing-about__ctn .about-ctn__left .about__call .site-call .phone {
+  width: 40px;
+  height: 40px;
+  padding-right: 20px;
+  background: white;
+  border-radius: 50%;
+}
+.landing-about .landing-about__ctn .about-ctn__left .about__call .site-call .phone i {
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid red;
+}
+.landing-about .landing-about__ctn .img-magento {
+  margin-top: 40px;
+}
+.landing-about .landing-about__ctn .img-solutions img {
+  padding: 20px 0;
+}
+
+.landing-product .landing-product__ctn {
+  padding: 10px;
+  display: flex;
+}
+.landing-product .landing-product__ctn .product-content {
+  width: 80%;
+}
+.landing-product .landing-product__ctn .product {
+  align-items: center;
+  display: flex;
+  border-radius: 15px;
+  margin: 0 auto;
+  width: 25%;
+  padding: 20px 40px;
+}
+.landing-product .landing-product__ctn .product img {
+  width: 100%;
+}
+.client-case p {
+  width: 80%;
+}
+.client-case .client-case__ctn {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-ourpartner .our-partner__ctn {
+  display: flex;
+}
+.section-ourpartner .our-partner__ctn .section-ctn {
+  flex-basis: 33.33%;
+  padding-left: 0;
+}
+.section-ourpartner .our-partner__ctn img {
+  max-width: 100%;
+  max-height: 100px;
+}
+.section-ourpartner .our-partner__ctn a {
+  width: 40%;
+  margin-left: 0;
+  background: white;
+  color: #d62a5d;
+  border: 1px solid #d62a5d;
+  transition-duration: 0.5s;
+}
+.section-ourpartner .our-partner__ctn a:hover {
+  background: #d62a5d;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.section-leadership .leadership-case__ctn {
+  display: flex;
+}
+.section-leadership .leadership-case__ctn .image-hover-wrapper-reveal {
+  opacity: 0;
+}
+.section-leadership .leadership-case__ctn .far {
+  padding-right: 20px;
+}
+
+.sub-email {
+  margin-top: 50px;
+  background-image: url("https://www.balanceinternet.com.au/wp-content/themes/Balance%20Internet%202018%20-%20SASS/img/footer-newsletter.svg");
+}
+.sub-email .landing-section__ctn {
+  color: white;
+  display: flex;
+  padding: 25px 40px;
+  justify-content: space-between;
+}
+.sub-email .landing-section__ctn .landing-row {
+  width: 70%;
+}
+.sub-email .landing-section__ctn .landing-right {
+  width: 40%;
+}
+.sub-email .landing-section__ctn .landing-right .subcribe-form {
+  padding: 35px 0;
+}
+.sub-email .landing-section__ctn .landing-right .subcribe-form input[type=email] {
+  border-radius: 50px 0 0 50px;
+  padding: 25px 30px;
+}
+.sub-email .landing-section__ctn .landing-right .subcribe-form input[type=submit] {
+  color: white;
+  border-radius: 0 50px 50px 0;
+  background: #d62a5d;
+  text-align: center;
+  padding: 25px 30px;
+  position: relative;
+  border-radius: 0 50px 50px 0;
+  left: -11px;
+}
+
+.footer .footer-ctn {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+.footer .footer-ctn .footer-item, .footer .footer-ctn .copy-right {
+  padding: 0 15px;
+}
+.footer .footer-ctn .footer-item a, .footer .footer-ctn .copy-right a {
+  color: black;
+}
+.footer .footer-ctn .footer-item a:hover, .footer .footer-ctn .copy-right a:hover {
+  color: red;
+}
+.footer .footer-ctn .footer-item img, .footer .footer-ctn .copy-right img {
+  width: 40px;
+  height: 40px;
+  display: inline;
+}
+
+@media screen and (min-width: 767px) {
+  .max-4line {
+    height: 90px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .max-2line {
+    height: 55px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header {
+    width: 100%;
+    overflow-x: hidden;
+    position: fixed;
+    height: 90px;
+  }
+  .header .header-ctn__nav {
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+  }
+  .header .header-ctn__nav .ctn-nav__logo {
+    width: 30%;
+  }
+  .header .header-ctn__nav .ctn-nav__logo img {
+    width: 90%;
+    padding: 40px 15px;
+  }
+  .header .header-ctn__nav .ctn-nav__items {
+    position: relative;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu {
+    width: 70%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    transition-duration: 0.5s;
+    top: 80px;
+    left: 0;
+    position: fixed;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .menu-items .hover-red {
+    padding: 20px;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .menu-items .hover-red .fas.fa-angle-right {
+    display: inline;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu.toggle {
+    transition-duration: 0.5s;
+    opacity: 1;
+    visibility: visible;
+    top: 80px;
+    left: 0;
+    position: fixed;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list .sub-menu .back-submenu {
+    display: block;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover {
+    border: none;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover .sub-menu {
+    max-height: 1000px;
+    top: 0;
+    width: 100%;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover .sub-menu .link-items {
+    padding: 20px;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover .sub-menu.return-mainmenu {
+    max-height: 0;
+    top: 0px;
+    transition-duration: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    padding: 0;
+    z-index: -20;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list.new-toggle .sub-menu {
+    max-height: 1000px;
+    top: 0;
+    width: 100%;
+  }
+  .header .header-ctn__nav .nav-icon {
+    display: block;
+    color: #d62a5d;
+    font-size: 24px;
+    left: 35px;
+    position: relative;
+  }
+  .header .header-ctn__nav .nav-icon:hover .main-menu {
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 0.5s;
+  }
+  .header .header-ctn__nav .ctn-nav__call .site-header {
+    padding: 30px;
+  }
+  .header .header-ctn__nav .ctn-nav__call .site-header .number {
+    display: none;
+  }
+
+  .banner {
+    position: relative;
+  }
+  .banner .banner-ctn {
+    flex-wrap: wrap;
+  }
+  .banner .banner-ctn .banner-ctn__item {
+    width: 50%;
+    min-height: 200px;
+  }
+  .banner .banner-ctn .banner-ctn__item .link-banner {
+    padding: 100px 20px;
+  }
+  .banner .banner-ctn .banner-ctn__item .link-banner h3 {
+    font-size: 16px;
+  }
+  .banner .banner-ctn .banner-ctn__item .link-banner .slide-icon {
+    display: none;
+  }
+  .banner .banner-ctn .banner-ctn__item .link-banner .link-banner__more .more-button {
+    padding: 10px;
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 100%;
+    overflow-x: hidden;
+    position: fixed;
+    height: 90px;
+  }
+  .header .header-ctn__nav {
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+  }
+  .header .header-ctn__nav .ctn-nav__logo {
+    width: 30%;
+  }
+  .header .header-ctn__nav .ctn-nav__logo img {
+    width: 90%;
+    padding: 40px 15px;
+  }
+  .header .header-ctn__nav .ctn-nav__items {
+    position: relative;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu {
+    width: 45%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    transition-duration: 0.5s;
+    top: 80px;
+    left: 0;
+    position: fixed;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .menu-items .hover-red {
+    padding: 20px;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .menu-items .hover-red .fas.fa-angle-right {
+    display: inline;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu.toggle {
+    transition-duration: 0.5s;
+    opacity: 1;
+    visibility: visible;
+    top: 80px;
+    left: 0;
+    position: fixed;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list .sub-menu .back-submenu {
+    display: block;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover {
+    border: none;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover .sub-menu {
+    max-height: 1000px;
+    top: 0;
+    width: 100%;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover .sub-menu .link-items {
+    padding: 20px;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list:hover .sub-menu.return-mainmenu {
+    max-height: 0;
+    top: 0px;
+    transition-duration: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    padding: 0;
+    z-index: -20;
+  }
+  .header .header-ctn__nav .ctn-nav__items .main-menu .toggle-list.new-toggle .sub-menu {
+    max-height: 1000px;
+    top: 0;
+    width: 100%;
+  }
+  .header .header-ctn__nav .nav-icon {
+    display: block;
+    color: #d62a5d;
+    font-size: 24px;
+    left: 35px;
+    position: relative;
+  }
+  .header .header-ctn__nav .nav-icon:hover .main-menu {
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 0.5s;
+  }
+  .header .header-ctn__nav .ctn-nav__call .site-header {
+    padding: 30px 20px 30px 45px;
+  }
+  .header .header-ctn__nav .ctn-nav__call .site-header .number {
+    display: inline;
+  }
+
+  .banner {
+    position: relative;
+  }
+  .banner .banner-ctn {
+    flex-wrap: wrap;
+  }
+  .banner .banner-ctn .banner-ctn__item {
+    width: 33.33%;
+    min-height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .banner .banner-ctn .banner-ctn__item .link-banner {
+    padding: 100px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .banner .banner-ctn .banner-ctn__item .link-banner h3 {
+    font-size: 18px;
+  }
+  .banner .banner-ctn .banner-ctn__item .link-banner .slide-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+  .banner .banner-ctn .banner-ctn__item .link-banner .slide-icon img {
+    padding: 0;
+    position: relative;
+    top: 15px;
+  }
+  .banner .banner-ctn .banner-ctn__item .link-banner .link-banner__more .more-button {
+    padding: 10px;
+    font-size: 11px;
+  }
+}

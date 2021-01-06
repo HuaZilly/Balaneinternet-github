@@ -38,16 +38,35 @@ h3
 .button
     background: $c-bg-button     
 .landing-button
-    width: 30%
-    display: block
+    min-width: 100px
+    display: inline
     padding: 15px 30px  
     border-radius: 50px
     margin: 0 auto
     position: relative
     top:35px       
     text-align: center    
+.input-text
+    padding: 14px 0 14px 20px
+    border: none
+    font-size: 18px
+    outline: none
+.button-more
+    background:$c-white
+    color: $c-bg-button
+    border: 1px solid $c-bg-button
+    transition-duration: 0.5s
+.button-more:hover
+    background:$c-bg-button
+    color: $c-white
+    border: 1px solid $c-bg-button
+    transition-duration: 0.5s
 .h2
-    font-size: 36px    
+    font-size: 36px
+.color-gray
+    color: gray
+    font-size: 18px
+            
 .sub-title
     font-size: 18px    
 .border-10    
@@ -83,7 +102,6 @@ $image-hover-wrapper-icon-size: 24px
         letter-spacing: normal
         line-height: initial
         margin: 0
-        padding: 0
         position: relative
 
         img 
@@ -147,7 +165,6 @@ $image-hover-wrapper-icon-size: 24px
     padding: 10px 0        
 .text-black
     color: $c-black
-    font-size: 18px
 .text-white
     color: $c-white   
     font-size: 18px
@@ -396,6 +413,52 @@ $image-hover-wrapper-icon-size: 24px
         display: flex
         .image-hover-wrapper-reveal
             opacity: 0                
+        .far
+            padding-right: 20px   
+.sub-email
+    margin-top: 50px
+    background-image: url('https://www.balanceinternet.com.au/wp-content/themes/Balance%20Internet%202018%20-%20SASS/img/footer-newsletter.svg')
+    .landing-section__ctn
+        color: $c-white
+        display: flex
+        padding: 25px 40px    
+        justify-content: space-between
+        .landing-row
+            width: 70%        
+        .landing-right
+            width: 40%     
+            .subcribe-form
+                padding: 35px 0
+                input[type="email"]
+                    border-radius: 50px 0 0 50px 
+                    padding: 25px 30px
+                input[type="submit"]    
+                    color: white
+                    border-radius: 0 50px 50px 0
+                    background: $c-bg-button
+                    text-align: center
+                    padding: 25px 30px
+                    position: relative
+                    border-radius: 0 50px 50px 0
+                    left: -11px
+.footer
+    .footer-ctn
+        display: flex
+        justify-content: space-between
+        padding: 40px 20px
+        .footer-item, .copy-right
+            padding: 0 15px
+           
+            a
+                color: $c-black        
+                &:hover
+                     color:$c-red
+            img
+                width: 40px
+                height: 40px
+                display: inline                    
+                   
+
 
 
              
@@ -406,6 +469,12 @@ $image-hover-wrapper-icon-size: 24px
         display: -webkit-box
         -webkit-box-orient: vertical
         -webkit-line-clamp: 3
+    .max-2line 
+        height: 55px
+        overflow: hidden
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 2
 @media screen and ( max-width: $md - 1 )
     
     .header
