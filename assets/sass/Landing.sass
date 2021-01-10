@@ -25,7 +25,7 @@ body
     margin: 0 auto
     font-family: 'Asap', sans-serif
     overflow-x: hidden
-    line-height: 30px
+    line-height: 36px
 ul,ol,li
     padding: 0
     list-style: none
@@ -35,6 +35,14 @@ a
     text-decoration: none   
 h3
     font-size: 24px   
+.site-call
+    display: flex
+    align-items: center
+    .phone
+        img
+            width: 40x 
+            height: 40px      
+            padding: 0 30px
 .button
     background: $c-bg-button     
 .landing-button
@@ -194,11 +202,11 @@ $image-hover-wrapper-icon-size: 24px
 .education
     background-image: $bg-education          
 .market
-    background: $bg-market          
+    background-image: $bg-market          
 .mantle
-    background: $bg-mantle
+    background-image: $bg-mantle
 .digital
-    background: $bg-digital                
+    background-image: $bg-digital                
 //Header
 //@media screen and ( min-width: $l)
         
@@ -560,13 +568,13 @@ $image-hover-wrapper-icon-size: 24px
                 .site-header
                     padding: 30px
                     .number
-                        display: none
+                        display: none !important
     .banner
         position: relative
         .banner-ctn
             flex-wrap: wrap
             .banner-ctn__item
-                width: 50%   
+                width: 50% !important
                 min-height: 200px
                 .link-banner
                     padding: 100px 20px
@@ -576,8 +584,69 @@ $image-hover-wrapper-icon-size: 24px
                         display: none
                     .link-banner__more
                         .more-button
-                            padding: 10px
+                            padding: 10px 20px !important
                             font-size: 11px    
+    .landing-section
+        position: relative
+        .landing-section__ctn
+            padding: 40px 20px
+            flex-wrap: wrap
+            .landing-right
+                width: 80%
+                .landing-button
+                    width: 100%
+                    margin: 30px auto
+                    display: block
+                    margin: 0 auto
+    .landing-about
+        .landing-about__ctn
+            padding: 20px
+            .about-ctn__left
+                width: 100%      
+    .landing-product
+        .landing-product__ctn
+            .product
+                flex-wrap: wrap
+                flex-direction: column-reverse
+                &.mantle
+                    img
+                        padding: 20px
+                .product-content
+                    width: 100%        
+    .client-case
+        .client-case__ctn
+            .image-hover-wrapper
+                flex-basis: 100% !important
+                .image-hover-wrapper-reveal
+                    img
+                        top: 40px
+    .section-ourpartner
+        .our-partner__ctn
+            .section-ctn
+                flex-basis: 100% !important
+    .section-leadership
+        .leadership-case__ctn
+            .image-hover-wrapper
+                width: 100% !important
+    .sub-email
+        .landing-section__ctn
+            .landing-right
+                .subcribe-form
+                    padding: 20px !important
+    .footer
+        .footer-ctn
+            flex-wrap: wrap
+            .footer-left
+                width: 100%
+                span
+                    display: block
+                    width: 100%       
+                    text-align: center
+                    padding: 0                                                              
+            .footer-right
+                margin: 0 auto
+
+
 @media screen and ( max-width: $l )
     .header
         width: 100%
@@ -691,3 +760,74 @@ $image-hover-wrapper-icon-size: 24px
                         .more-button
                             padding: 10px
                             font-size: 11px    
+    .landing-about
+        .landing-about__ctn
+            display: block 
+            .site-call
+                display: flex
+                align-items: center       
+            .about-right
+                align-items: center
+                display: flex    
+                .about-img
+                    flex-basis: 50%
+                img
+                    margin: 0 auto
+    .landing-product
+        .landing-product__ctn
+            flex-wrap: wrap
+            .product-content
+                max-width: 80%
+            .product
+                width: 85%
+                margin: 0 auto
+                margin-top: 30px
+                flex-wrap: nowrap
+                justify-content: space-between
+            .product.mantle
+                img
+                    width: auto    
+    .client-case
+        .client-case__ctn
+            flex-wrap: wrap
+            .image-hover-wrapper
+                flex-basis: 45%
+    .section-ourpartner
+        .our-partner__ctn
+            flex-wrap: wrap
+            .section-ctn
+                flex-basis: 45%   
+                padding: 40px 0   
+                .max-4line
+                    height: auto      
+                .our-partner__img    
+                    &::before
+                        content: ""
+                        height: 5px
+                        width: 60px
+                        border-radius: 5px
+                        background: #e8e8e8
+                        display: block
+    .section-leadership
+        .leadership-case__ctn
+            flex-wrap: wrap
+            .image-hover-wrapper
+                width: 45%
+                padding: 35px 0   
+    .sub-email
+        .landing-section__ctn
+            flex-wrap: wrap
+            .landing-row
+                margin: 0 auto
+                text-align: center
+            .landing-right
+                width: 100%
+                margin: 0 auto
+                .subcribe-form
+                    padding: 20px 70px
+                    display: flex
+                    input
+                        display: block
+                    input[type="email"] 
+                        width: 80%       
+                        font-style: italic                    
