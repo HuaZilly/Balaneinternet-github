@@ -343,7 +343,7 @@ h3 {
 }
 .banner .banner-ctn .banner-ctn__item .link-banner {
   display: block;
-  padding: 150px 20px;
+  padding: 500px 20px 200px;
   background-size: cover;
 }
 .banner .banner-ctn .banner-ctn__item .link-banner .overlay-hover {
@@ -548,7 +548,7 @@ h3 {
 
 @media screen and (min-width: 767px) {
   .max-4line {
-    height: 90px;
+    height: 100px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
