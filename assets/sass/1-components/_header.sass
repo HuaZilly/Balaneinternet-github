@@ -1,0 +1,73 @@
+.header
+    height: 88px
+    background: white
+    position: fixed
+    width: 100%
+    z-index: 1000
+    .header-nav
+        justify-content: space-between
+        .ctn-nav__logo
+            img
+                border-left: 5px solid red
+                width: 60%
+                padding: 27px 15px
+        .ctn-nav__items
+            .menu-items
+                .hover-red
+                    padding: 30px 20px
+                    display: block
+                    .fas.fa-angle-right
+                        display: none
+                    &:hover
+                        color: red
+            .toggle-list
+                .sub-menu
+                    max-height: 0
+                    top: 85px
+                    transition-duration: 0.5s
+                    opacity: 0
+                    visibility: hidden
+                    position: absolute
+                    padding: 0
+                    z-index: -20
+                    .back-submenu
+                        display: none
+                    a
+                        color: #000
+                        padding: 10px 20px
+                &:hover
+                    border-bottom: 5px solid $c-main-color
+                    .sub-menu
+                        max-height: 400px
+                        z-index: 1000
+                        opacity: 1
+                        visibility: visible
+                        display: block
+                        transition-duration: 0.5s
+                        border-radius: 10px
+                        li
+                            background: $c-white
+
+                            &:hover
+                                color: $c-main-color
+        .nav-icon
+            display: none
+
+        .ctn-nav__call
+            span
+                display: inline-block
+                vertical-align: middle
+            .site-header
+                display: block
+                padding: 24px 35px 24px
+                background-image: url('https://www.balanceinternet.com.au/wp-content/themes/Balance%20Internet%202018%20-%20SASS/img/b2b/landing-mask5.svg')
+                background-repeat: no-repeat
+                .phone
+                    border-radius: 50%
+                    text-align: center
+                    width: 40px
+                    height: 40px
+                    background: $c-white
+                    i
+                        font-size: 20px
+                        padding: 10px
