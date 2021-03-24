@@ -21,8 +21,28 @@
         background-color: $c-white
         color: $c-main-color
         transition-duration: .5s
-        
 
 .rounded       
     border-radius: 40px 
-                
+
+.button-more
+    width: 40%
+    margin-left: 0
+    padding: 15px 30px
+    background: $c-white
+    color: $c-bg-button
+    border: 1px solid $c-bg-button
+    transition-duration: 0.5s
+    &:hover
+        background: $c-bg-button
+        color: $c-white
+        transition-duration: 0.5s        
+
+@media screen and ( max-width: $md - 1 )
+    .wrapp-md
+        flex-wrap: wrap
+    .landing-button 
+        width: 100%
+
+            
+            

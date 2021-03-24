@@ -1,0 +1,77 @@
+// MODULES > Subscription form
+
+.hidden_sub_label
+  display: none
+
+.subscription-form
+  background: $c-main-color url('https://balanceinternet.com.vn/wp-content/themes/Balance%20Internet%202018%20-%20SASS/img/new-footer-update.svg')
+  clear: both
+  color: $c-white
+  padding: 23px 0
+  text-align: center
+  .landing-row
+    h2
+      text-align: center
+
+
+  form
+    position: relative
+
+  h1,
+  p
+    font-size: 18px
+    display: block
+    margin: 0 auto 30px
+    text-align: center
+
+  h1
+    font-size: 36px
+    line-height: 48px
+    margin-bottom: 0
+
+  input
+    &[type='email'],
+    &[type='text']
+      height: 60px
+      outline: none
+      padding: 0 20px
+      display: block
+      margin: 20px
+      font-style: italic
+      font-size: 18px
+
+    &[type='submit']
+      min-width: 210px
+      width: 240px
+      outline: none
+      padding: 20px
+      border: none
+      margin: 20px auto 0
+      display: block
+      background-color: $c-main-color
+      border: 1px solid $c-main-color
+      color: $c-white
+      font-size: 18px
+      cursor: pointer
+      transition-duration: 0.5s
+      margin-bottom: 30px
+      &:hover
+        background-color: $c-white
+        color: $c-main-color
+        transition-duration: 0.5s
+        
+
+     
+
+@media only screen and (max-width: 1024px)
+  .subscription-form
+    padding: 40px 0
+    
+  // SCREEN SIZE <= 639px
+@media only screen and (max-width: $md - 1 )
+  .subscription-form
+    input
+      &[type='email'],
+      &[type='text'],
+      &[type='submit']
+        width: 100%

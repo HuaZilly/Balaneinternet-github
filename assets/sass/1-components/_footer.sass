@@ -1,0 +1,147 @@
+// LAYOUTS > SITE FOOTER
+
+.footer
+  clear: both
+
+  .social-links
+      margin-right: 40px
+  .cta
+    background: $c-red
+    padding: 100px 0
+
+    h1
+      color: $c-white
+      font-size: 36px
+      line-height: 48px
+      margin: 0 0 12px
+      text-align: center
+
+    p
+      margin: 0
+      text-align: center
+
+  ul,
+  li
+    display: inline-block
+    text-align: center
+
+  ul
+    margin: 0
+    padding: 0
+
+  a
+    color: $c-black
+    display: inline-block
+    padding: 30px 0
+    text-decoration: none
+
+    &:hover
+      color: $c-red
+
+  li
+    list-style: none
+    padding: 0 15px
+
+  .seo-text
+    display: none
+    padding-top: 18px
+
+    p
+      color: $c-white
+      margin: 0 0 30px
+
+    a
+      color: $c-white
+
+    h2
+      color: $c-white
+      font-size: 24px
+      line-height: 30px
+      text-align: center
+
+    h3
+      color: $c-white
+      font-size: 18px
+      text-align: center
+
+.office-links
+  background: $c-gray
+  text-align: center
+
+.lower-footer
+
+  .footer-links
+    float: left
+    padding-left: 30px
+
+    p,
+    li
+      display: inline-block
+      line-height: 30px
+      padding: 0 30px 0 0
+      text-align: center
+
+.button-scroll-to-top
+  background: url('img/icon-up-arrow.svg') 50% 50% no-repeat $c-gray
+  border: 2px solid $c-white
+  border-radius: 50%
+  bottom: 20px
+  cursor: pointer
+  display: none
+  height: 50px
+  letter-spacing: -999em
+  position: fixed
+  right: 30px
+  text-indent: -999em
+  width: 50px
+
+// SCREEN SIZE <= 1024px
+
+@media only screen and (max-width: 1024px)
+  .footer
+    .cta
+      padding: 60px 0
+
+      h1
+        font-size: 24px
+        line-height: 36px
+        margin: 0 0 12px
+
+      .call
+        font-size: 18px
+        line-height: 30px
+        padding: 6px 0 6px 50px
+
+// SCREEN SIZE <= 768px
+
+@media only screen and (max-width: 768px)
+    .footer
+        .social-links
+            margin: 0 auto
+
+  .office-links
+    display: none
+
+  .lower-footer
+
+    .footer-links,
+    ul
+      display: block
+      float: none
+      margin: 0
+      padding: 0
+
+    .footer-links
+      padding: 25px 0
+
+      p
+        margin: 0
+        padding: 0
+        width: 100%
+
+      li
+        display: block
+        padding: 0
+
+        a
+          padding: 0

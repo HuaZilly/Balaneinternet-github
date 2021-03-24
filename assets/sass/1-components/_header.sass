@@ -1,73 +1,352 @@
-.header
-    height: 88px
-    background: white
-    position: fixed
+// LAYOUTS > SITE HEADER
+
+.site-header
+  background: $c-white
+  left: 0
+  position: fixed
+  text-align: center
+  top: 0
+  width: 100%
+  z-index: 1000
+
+// Site logo
+
+.site-logo
+  border-left: 5px solid $c-red
+  float: left
+  padding: 35px 0 35px 30px
+  position: relative
+  z-index: 1100
+
+  img
+    height: 30px
+    margin: 0
+
+// Main Navigation
+
+.main-nav
+  float: left
+  margin: -100px 0 0
+  width: 100%
+
+  ul,
+  li
+    display: inline
+    text-align: center
+
+  ul
+    padding: 0
+
+  a
+    color: $c-black
+    display: inline-block
+    padding: 35px 15px
+    text-decoration: none
+
+    &:hover
+      color: $c-red
+
+  .current-menu-item
+
+    a
+      color: $c-red
+
+  .right-shift
+    float: right
+    font-weight: bold
+    padding-right: 15px
+    position: absolute
+    right: 270px
+    top: 0
+
+.menu-item-toggle-in,
+.menu-item-toggle-out
+  display: none
+
+// Hamburger
+
+.hamburger
+  cursor: pointer
+  display: none
+  float: right
+  height: 80px
+  line-height: 80px
+  text-align: center
+  width: 80px
+
+  &-box
+    transition-timing-function: linear
+    transition-duration: .15s
+    transition-property: opacity,transform
+    position: relative
+    display: inline-block
+    width: 24px
+    height: 24px
+    vertical-align: middle
+
+  &-inner
+    top: 50%
+    display: block
+    margin-top: -3px
+    transition-timing-function: cubic-bezier(.55,.055,.675,.19)
+    transition-duration: 75ms
+
+    &:after,
+    &:before
+      display: block
+      content: ""
+
+    &:before
+      top: -10px
+      transition: top 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19)
+      transform: rotate(0)
+
+    &:after
+      bottom: -10px
+      transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19)
+      transform: rotate(0)
+
+    &,
+    &:after,
+    &:before
+      position: absolute
+      width: 24px
+      height: 3px
+      transition-timing-function: ease
+      transition-duration: .15s
+      transition-property: transform
+      border-radius: 6px
+      background-color: $c-red
+
+  &.is-active &-inner
+    background-color: transparent
+
+    &:before,
+    &:after
+      background-color: $c-red
+
+    &:before
+      top: 0
+      transition: top 0s ease,transform 75ms cubic-bezier(.215,.61,.355,1)
+      transform: rotate(45deg)
+
+    &:after
+      bottom: 0
+      transition: bottom 0s ease,transform 75ms cubic-bezier(.55,.055,.675,.19)
+      transform: rotate(-45deg)
+
+// SCREEN SIZE <= 1470px
+
+@media only screen and (max-width: 1470px)
+
+  .site-header
+    height: 80px
+
+  // Site logo
+
+  .site-logo
+    padding: 25px 0 25px 20px
+
+    img
+      height: 28px
+
+  // Main Navigation
+
+  .main-nav
+    margin-top: -80px
+
+    a
+      padding: 25px 15px
+
+    .right-shift
+      float: none
+      padding-right: 0
+      position: relative
+      right: auto
+      top: auto
+
+// SCREEN SIZE <= 1280px
+
+@media only screen and (max-width: 1280px)
+
+  .site-logo
+
+    img
+      width: 120px
+
+  .main-nav
+    padding-right: 300px
+    text-align: right
+
+    a
+      padding: 25px 10px
+
+// SCREEN SIZE <= 1200px
+
+@media only screen and (max-width: 1200px)
+
+  .hamburger
+    display: block
+
+  .main-nav
+    background: $c-white
+    display: none
+    float: left
+    height: calc(100vh - 80px)
+    left: 0
+    margin: 0
+    max-width: 305px
+    padding: 10px 0
+    position: absolute
+    text-align: left
+    top: 80px
     width: 100%
-    z-index: 1000
-    .header-nav
-        justify-content: space-between
-        .ctn-nav__logo
-            img
-                border-left: 5px solid red
-                width: 60%
-                padding: 27px 15px
-        .ctn-nav__items
-            .menu-items
-                .hover-red
-                    padding: 30px 20px
-                    display: block
-                    .fas.fa-angle-right
-                        display: none
-                    &:hover
-                        color: red
-            .toggle-list
-                .sub-menu
-                    max-height: 0
-                    top: 85px
-                    transition-duration: 0.5s
-                    opacity: 0
-                    visibility: hidden
-                    position: absolute
-                    padding: 0
-                    z-index: -20
-                    .back-submenu
-                        display: none
-                    a
-                        color: #000
-                        padding: 10px 20px
-                &:hover
-                    border-bottom: 5px solid $c-main-color
-                    .sub-menu
-                        max-height: 400px
-                        z-index: 1000
-                        opacity: 1
-                        visibility: visible
-                        display: block
-                        transition-duration: 0.5s
-                        border-radius: 10px
-                        li
-                            background: $c-white
 
-                            &:hover
-                                color: $c-main-color
-        .nav-icon
-            display: none
+    ul,
+    li
+      text-align: left
 
-        .ctn-nav__call
-            span
-                display: inline-block
-                vertical-align: middle
-            .site-header
-                display: block
-                padding: 24px 35px 24px
-                background-image: url('https://www.balanceinternet.com.au/wp-content/themes/Balance%20Internet%202018%20-%20SASS/img/b2b/landing-mask5.svg')
-                background-repeat: no-repeat
-                .phone
-                    border-radius: 50%
-                    text-align: center
-                    width: 40px
-                    height: 40px
-                    background: $c-white
-                    i
-                        font-size: 20px
-                        padding: 10px
+    li,
+    a
+      float: left
+      width: 100%
+
+    a
+      padding: 7px 15px
+
+    .right-shift
+      padding: 0
+      position: relative
+      right: auto
+      top: auto
+
+    .menu-item-has-children
+      display: block
+      padding-left: 15px
+      padding-right: 15px
+      position: static
+
+      & > a
+        display: block
+        float: none
+        padding-left: 0
+        padding-right: 0
+        width: auto
+
+      & > .sub-menu
+        background: $c-white
+        display: block
+        height: 100%
+        left: 0
+        opacity: 0
+        padding: 10px 0 30px 0
+        position: absolute
+        transform: translateX(30px)
+        transition: all 350ms ease-in-out 0s
+        top: 0
+        visibility: hidden
+        width: 100%
+        z-index: 2
+
+      &.active
+        & > .sub-menu
+          opacity: 1
+          transform: translateX(0)
+          transition: all 250ms ease-in-out 0s
+          visibility: visible
+
+      .menu-item-toggle-in,
+      .menu-item-toggle-out
+        display: inline-block
+        min-width: 44px
+        line-height: 44px
+        text-align: center
+        vertical-align: middle
+
+        &:before
+          border: 2px solid transparent
+          border-radius: 3px
+          content: ''
+          display: inline-block
+          height: 12px
+          left: -3px
+          line-height: 1
+          position: relative
+          transform: rotate(45deg)
+          width: 12px
+
+      .menu-item-toggle-in
+        float: right
+        &:before
+          border-right-color: $c-red
+          border-top-color: $c-red
+
+      .menu-item-toggle-out
+        margin-left: 15px
+        &:before
+          border-bottom-color: $c-red
+          border-left-color: $c-red
+
+// SCREEN SIZE <= 375px
+
+@media only screen and (max-width: 375px)
+
+  .site-logo
+
+    img
+      width: 120px
+
+
+// SCREEN SIZE > 1201px
+
+@media only screen and (min-width: 1201px)
+  .main-nav
+    .menu-item-has-children
+      display: inline-block
+      position: relative
+
+      &:hover,
+      &:active,
+      &:focus,
+      &.active
+        & > a
+          position: relative
+          &:after
+            background: $c-red
+            bottom: 0
+            content: ''
+            display: block
+            height: 4px
+            left: 15px
+            position: absolute
+            width: calc(100% - 30px)
+
+        & > .sub-menu
+          opacity: 1
+          transform: translateY(0)
+          transition: all 250ms ease-in-out 0s
+          visibility: visible
+
+      .sub-menu
+        background: $c-white
+        border-radius: 0 0 10px 10px
+        display: block
+        left: -15px
+        min-width: 280px
+        opacity: 0
+        padding: 25px 30px 25px 30px
+        position: absolute
+        top: 100%
+        transform: translateY(-15px)
+        transition: none
+        visibility: hidden
+        z-index: 2
+
+        li
+          display: block
+          text-align: left
+          width: 100%
+
+        a
+          display: block
+          padding: 5px 0

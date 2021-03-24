@@ -1,0 +1,127 @@
+// MODULES > Call
+
+.call
+  background: none
+  color: $c-black
+  display: inline-block
+  font-size: 24px
+  font-weight: bold
+  line-height: 30px
+  padding: 5px 0 5px 50px
+  position: relative
+  text-decoration: none
+
+  &::before
+    background: url('img/icon-call-red.svg') 0 0 no-repeat
+    content: ''
+    height: 40px
+    left: 0
+    position: absolute
+    top: 0
+    width: 40px
+
+// Site footer variation
+
+.site-footer
+
+  .call
+    color: $c-white
+    padding: 5px 0 5px 50px
+
+    &:hover
+      color: $c-white
+
+    &::before
+      background: url('img/icon-call-white.svg') 0 0 no-repeat
+
+// Site header variation
+
+.site-header
+
+  .call
+    background: url('img/icon-call-white.svg') 35px 50% no-repeat
+    background-color: $c-red
+    background-size: 40px 40px
+    color: $c-white
+    float: right
+    font-size: 18px
+    font-weight: bold
+    line-height: 24px
+    padding: 38px 0 38px 35px
+    width: 270px
+    z-index: 1100
+
+    &::before
+      background: none
+
+  .site-call
+    background: transparent url(https://balanceinternet.com.vn/wp-content/themes/Balance%20Internet%202018%20-%20SASS/img/b2b/landing-mask5.svg) top right no-repeat
+    color: $c-white
+    float: right
+    font-size: 18px
+    font-weight: bold
+    line-height: 40px
+    padding: 28px 30px 28px 55px
+    position: relative
+    text-decoration: none
+    z-index: 1100
+
+    span
+      display: inline-block
+      vertical-align: middle
+
+    .icon-phone
+      background: white
+      border-radius: 50%
+      height: 40px
+      margin-left: 10px
+      margin-right: 10px
+      line-height: 40px
+      width: 40px
+
+      svg
+        margin-top: 10px
+
+
+// SCREEN SIZE <= 1470px
+
+@media only screen and (max-width: 1470px)
+
+  .site-header
+
+    .call
+      background-position: 30px 50%
+      padding: 28px 0 28px 45px
+      width: 250px
+
+    .site-call
+      padding: 18px 30px 18px 55px
+
+// SCREEN SIZE <= 1280px
+
+@media only screen and (max-width: 1280px)
+
+  .site-header
+
+    .call
+      background-position: 20px 50%
+      width: 230px
+
+// SCREEN SIZE <= 768px
+
+@media only screen and (max-width: 767px)
+
+  .site-header
+
+    .call
+      background-position: 50%
+      letter-spacing: -999em
+      text-indent: -999em
+      width: 80px
+
+    .site-call
+      background-position: top left
+      padding: 19px 16px 18px 37px
+      .number
+        display: none
+

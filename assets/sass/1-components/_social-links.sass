@@ -1,0 +1,108 @@
+// MODULES > SOCIAL LINKS
+
+.social-links
+  float: right
+  font-size: 0
+  line-height: 0
+  list-style: none
+  padding: 0
+
+  li
+    display: inline-block
+    padding: 0
+
+    svg
+      fill: $c-bg-button
+      height: 40px
+      left: 0
+      position: absolute
+      top: 1px
+      transition: fill .25s ease
+      width: 40px
+
+  a
+    display: block
+    height: 41px
+    margin: 25px 0 25px 15px
+    overflow: hidden
+    padding: 0
+    position: relative
+    text-indent: -999em
+    width: 41px
+
+    &:hover
+
+      svg
+        fill: $purple
+
+@media screen and (min-width: $xl)
+  .social-links
+    &.large
+      li
+        svg
+          height: 89px
+          width: 90px
+
+      a
+        height: 90px
+        width: 90px
+
+// Page header variant
+
+.page-header
+
+  .social-links
+    margin: -20px
+    position: absolute
+    right: 0
+
+    a
+      margin-bottom: 0
+      margin-top: 15px
+
+// Site Footer variant
+
+.site-footer
+
+  .social-links
+    float: right
+    margin-right: 75px
+    padding-right: 30px
+
+// SCREEN SIZE <= 768px
+
+@media only screen and (max-width: 768px)
+
+  .lower-footer
+
+    .social-links
+      display: block
+      float: none
+      margin: 0
+      padding: 0
+
+  .social-links
+
+    li
+
+      a
+        margin: 0 5px 25px
+
+  .page-header
+
+    .social-links
+      float: none
+      margin: 0
+      position: relative
+      right: auto
+
+    li
+
+      a
+        height: 31px
+        margin: 0 10px 12px 0
+        width: 31px
+
+        svg
+          height: 40px
+          width: 40px
